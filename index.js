@@ -8,8 +8,8 @@ let getSeconds = 0,
     getMinutes = 0,
     getHours = 0;
 
-function stopwatch() {
-    this.start = function() {
+
+   function objectStart(){
         hour = document.getElementById("hour");
         minute = document.getElementById("minute");
         seconds = document.getElementById("seconds");
@@ -37,12 +37,12 @@ function stopwatch() {
         if (getHours < 10){
             hour.innerHTML = "0" + getHours + ":"
         }
-        interval = setTimeout(Object.start, 1000);
+        interval = setTimeout(objectStart, 1000);
     }
-    this.stop = function () {
+    function objectStop () {
         clearTimeout(interval);
     }//stop the watch
-    this.reset = function () {
+    function objectReset () {
         if (getSeconds >= 0){
             getSeconds = 0;
             getHours = 0;
@@ -54,5 +54,4 @@ function stopwatch() {
             clearTimeout(interval);
         }
     }
-}
-let Object = new stopwatch();
+		
